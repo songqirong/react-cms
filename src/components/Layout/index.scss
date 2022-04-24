@@ -1,0 +1,39 @@
+.layout_container{
+  .sider{
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    .logo {
+      height: 32px;
+      margin: 16px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+  .layout_item{
+    height: 100vh;
+    margin-left: 200px;
+    overflow: hidden;
+    .header{
+      padding: 0;
+    };
+    .content{
+      margin: 24px 16px 0;
+    };
+    .footer{
+      text-align: center;
+    }
+  }
+}
+
+.dark{
+  background-color: #000;
+  color: #fff;
+}
+
+.light{
+  background-color: #fff;
+  color: #000;
+}
+

@@ -3,7 +3,7 @@ import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 const instance = axios.create({
   baseURL: 'http://localhost:8099',
   withCredentials: true,
-  timeout: 7000
+  timeout: 7000,
 });
 
 // 请求拦截器

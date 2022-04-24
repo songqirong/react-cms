@@ -127,3 +127,10 @@ npm i sass-loader sass -D
 
 npm i eslint stylelint-scss stylelint stylelint-config-standard stylelint-order lint-staged husky -D
 
+## seo优化
+
+npm i react-helmet-async -S
+
+## 集成路由
+
+npm i react-router-dom -S

@@ -1,4 +1,4 @@
-import instance from "src/utils/http";
+import instance from 'src/utils/http';
 
 
-export const fetch_hello = (params: any) => instance.get('/hello', { params })
+export const fetch_hello = (params: any) => instance.get('/hello', { params });
