@@ -1,6 +1,6 @@
 import { cloneDeep } from 'lodash';
 import { combineReducers } from 'redux';
-import { Action, handleActions, ReduxCompatibleReducer } from 'redux-actions';
+import { Action, handleActions } from 'redux-actions';
 import { create_action, update_state } from 'src/utils/redux';
 import { homeReducer } from './home/reducer';
 
@@ -16,9 +16,9 @@ const initState: IThemeState = {
 export const UPDATETHEME = 'update_theme';
 export const update_theme = create_action(UPDATETHEME);
 export const handle_update_theme = (state: IThemeState, action: Action<Partial<IThemeState>>) => update_state(state, action.payload);
-const themeReducer: ReduxCompatibleReducer<IThemeState, IThemeState> = handleActions({
+const themeReducer = handleActions<IThemeState, Partial<IThemeState>>({
   [UPDATETHEME]: handle_update_theme,
-}, cloneDeep(initState) );
+}, cloneDeep(initState));
 
 export const reducers = combineReducers({
   home: homeReducer,

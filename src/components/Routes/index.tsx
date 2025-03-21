@@ -3,12 +3,14 @@ import { BrowserRouter, Route, Routes as RoutesRRD } from 'react-router-dom';
 import { LazyComponent } from 'src/utils/lazy';
 const Home = LazyComponent('HomePage', import('../../pages/home'));
 const Test = LazyComponent('TestComponentContainer', import('../../pages/test'));
+// const Login = LazyComponent('longinComponent', import('../../pages/login'));
 const PageNotFound = LazyComponent('PageNotFound', import('../../pages/page-not-found'));
 
 export const Routes: FC = (props) => (
   <RoutesRRD >
     <Route element={<Home />} path="/" ></Route>
     <Route element={<Test />} path="/test" ></Route>
+    {/* <Route element={<Login />} path="/login" ></Route> */}
     <Route element={<PageNotFound /> } path="*" ></Route>
   </RoutesRRD>
 );
